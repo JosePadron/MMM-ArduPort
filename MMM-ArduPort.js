@@ -148,6 +148,8 @@ Module.register("MMM-ArduPort", {
         val.classList.add("port-data");
 
         if (value != null) {
+	    val.innerHTML = "({0}) ".format(value);
+
             if (this.config.useColors){
                 if (value >= sensor.maxValue){
                     if (sensor.maxFormat != null) {
